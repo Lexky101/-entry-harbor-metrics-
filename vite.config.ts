@@ -6,16 +6,9 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    port: 3001,
     strictPort: true,
     host: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
   },
   preview: {
     port: 4173,
@@ -35,6 +28,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
+          auth: ['@supabase/supabase-js'],
         },
       },
     },
