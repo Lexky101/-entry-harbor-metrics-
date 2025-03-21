@@ -1,69 +1,69 @@
-# Welcome to your Lovable project
+# Entry Harbor Metrics
 
-## Project info
+A modern analytics dashboard built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/cfea370f-df71-4d9a-9459-0d4232c7440b
+## Features
 
-## How can I edit this code?
+- Modern UI with Tailwind CSS and shadcn/ui components
+- Responsive design
+- Type-safe development with TypeScript
+- Fast development with Vite
+- Production-ready build configuration
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfea370f-df71-4d9a-9459-0d4232c7440b) and start prompting.
+- Node.js 18 or higher
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Development
 
-**Use your preferred IDE**
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file based on `.env.example`
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Building for Production
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+To preview the production build:
+```bash
+npm run preview
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+This project is configured for deployment on Netlify.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Netlify Deployment
 
-## What technologies are used for this project?
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Sign up for a Netlify account
+3. Click "New site from Git"
+4. Choose your repository
+5. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+6. Add environment variables in Netlify dashboard
+7. Deploy!
 
-This project is built with .
+### Environment Variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Required environment variables:
+- `VITE_APP_TITLE`: Application title
+- `VITE_API_URL`: API endpoint URL
+- `VITE_APP_ENV`: Environment (development/production)
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/cfea370f-df71-4d9a-9459-0d4232c7440b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+MIT
