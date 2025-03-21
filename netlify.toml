@@ -10,6 +10,20 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  framework = "vite"
+  targetPort = 3000
+  port = 3000
+  publish = "dist"
+  autoLaunch = true
+  environment = { NODE_ENV = "development" }
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -17,6 +31,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https://*.netlify.app https://*.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.netlify.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.googleapis.com https://*.googleusercontent.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.netlify.app https://*.googleapis.com;"
 
 [context.production]
   command = "npm run build"
