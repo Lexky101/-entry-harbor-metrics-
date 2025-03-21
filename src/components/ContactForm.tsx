@@ -39,8 +39,20 @@ export function ContactForm() {
         <CardDescription>Send us a message and we'll get back to you soon.</CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form 
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit} 
+          className="space-y-4"
+        >
           <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don't fill this out: <input name="bot-field" />
+            </label>
+          </p>
           
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium">Name</label>
